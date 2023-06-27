@@ -47,6 +47,9 @@ void quick_sort(int *array, size_t size);
 void quick_sort_first(int *array, int start, int end);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
+void merge(int *array, int start, int middle, int end, int *temp);
+void merge_sort_first(int *array, int start, int end, int *temp);
+void merge_sort(int *array, size_t size);
 
 /*Printing functions*/
 void print_array(const int *array, size_t size);
