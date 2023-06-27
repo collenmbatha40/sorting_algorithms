@@ -30,6 +30,8 @@ typedef enum bool
 	true
 } bool;
 
+/* Swapping function */
+void swap(int *x, int *y);
 
 /* Sorting prototypes */
 void bubble_sort(int *array, size_t size);
