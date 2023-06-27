@@ -25,6 +25,9 @@ void swap(int *x, int *y)
 
 void selection_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
+{
 	size_t i;
 
 	for (i = 0; i < size; i++)
@@ -45,4 +48,5 @@ void selection_sort(int *array, size_t size)
 		}
 		}
 	}
+}
 }
