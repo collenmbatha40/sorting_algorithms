@@ -1,10 +1,5 @@
 #include "sort.h"
 
-void swap_ints(int *x, int *y);
-int partition(int *array, int start, int end);
-void quick_sort_first(int *array, int start, int end);
-void quick_sort(int *array, size_t size);
-
 /**
  * swap - Swap two integers in an array.
  * @x: The first integer to swap.
@@ -59,7 +54,7 @@ int partition(int *array, int start, int end)
  *
  */
 
-void quick_sort_first(int array[], int start, int end)
+void quick_sort_first(int *array, int start, int end)
 {
 	if (start < end)
 	{

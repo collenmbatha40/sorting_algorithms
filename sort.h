@@ -30,15 +30,23 @@ typedef enum bool
 	true
 } bool;
 
+size_t list_len(listint_t *list);
+
 /* Swapping function */
 void swap(int *x, int *y);
+void switch_nodes(listint_t **list, listint_t **p);
+
+/*partitioning function */
+int partition(int *array, int start, int end);
 
 /* Sorting prototypes */
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void quick_sort_first(int *array, int start, int end);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
 
 /*Printing functions*/
 void print_array(const int *array, size_t size);
