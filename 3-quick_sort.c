@@ -34,6 +34,7 @@ int partition(int *array, int start, int end)
 	int pivot = array[end];
 	int i = start - 1;
 	int j;
+	size_t size = 0;
 
 	for (j = start; j <= end - 1; j++)
 	{
@@ -41,9 +42,11 @@ int partition(int *array, int start, int end)
 		{
 			i++;
 			swap(&array[i], &array[j]);
+			print_array(array, size);
 		}
 	}
 	swap(&array[i + 1], &array[end]);
+	print_array(array, size);
 	return (i + 1);
 }
 
@@ -79,5 +82,7 @@ void quick_sort_first(int array[], int start, int end)
 
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
 	quick_sort_first(array, 0, size - 1);
 }
